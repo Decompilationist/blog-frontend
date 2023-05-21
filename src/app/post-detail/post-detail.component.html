@@ -1,10 +1,11 @@
 <div *ngIf="post">
   <h2>{{ post.title }}</h2>
-  <p><strong>Autor:</strong> {{ post.author.name }}</p>
-  <p><strong>Data de publicação:</strong> {{ post.publishedDate | date }}</p>
-  <p><strong>Categoria:</strong> {{ post.category.name }}</p>
+  <p><strong>Author:</strong> {{ post.author.name }}</p>
+  <p><strong>Published Date:</strong> {{ post.publishedDate | date }}</p>
+  <p><strong>Category:</strong> {{ post.category.name }}</p>
   <div>
-    <h3>Conteúdo:</h3>
+    <h3>Content:</h3>
     <p>{{ post.content[0].children[0].text }}</p>
   </div>
+  <button routerLink="/" class="btn btn-primary">Voltar</button>
 </div>
