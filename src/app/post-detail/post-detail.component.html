@@ -1,11 +1,13 @@
-<div *ngIf="post" class="container mx-auto">
-  <h2 class="text-2xl font-bold mb-4">{{ post.title }}</h2>
-  <p><strong>Autor:</strong> {{ post.author.name }}</p>
-  <p><strong>Data de publicação:</strong> {{ post.publishedDate | date }}</p>
-  <p><strong>Categoria:</strong> {{ post.category.name }}</p>
-  <div class="mt-4">
-    <h3 class="text-lg font-bold mb-2">Conteúdo:</h3>
-    <p>{{ post.content[0].children[0].text }}</p>
+<div *ngIf="post" class="bg-purple-800 min-h-screen flex items-center justify-center">
+  <div class="container mx-auto max-w-lg p-6 bg-white rounded-lg shadow-lg">
+    <h2 class="text-2xl font-bold mb-4">{{ post.title }}</h2>
+    <p><strong>Autor:</strong> {{ post.author.name }}</p>
+    <p><strong>Data de publicação:</strong> {{ post.publishedDate | date }}</p>
+    <p><strong>Categoria:</strong> {{ post.category.name }}</p>
+    <div class="mt-4 border border-gray-300 rounded p-4">
+      <h3 class="text-lg font-bold mb-2">Conteúdo:</h3>
+      <p>{{ post.content[0].children[0].text }}</p>
+    </div>
+    <button routerLink="/" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 mt-4 rounded">Voltar</button>
   </div>
-  <button routerLink="/" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 mt-4 rounded">Voltar</button>
 </div>
