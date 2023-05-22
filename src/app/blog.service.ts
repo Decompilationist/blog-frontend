@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class BlogService {
-  private apiUrl = '/api/posts';
+  private apiUrl = 'https://apiblog-8w5f.onrender.com/api/posts';
 
   constructor(private http: HttpClient) { }
 
